@@ -17,7 +17,7 @@ public class RunTest {
 		ChromeDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("http://3.6.37.253:8080/webapp/");
+		driver.get("http://localhost:8081/webapp/");
 		String text = driver.findElement(By.linkText("Get in touch")).getText();
 		if(text.equals("Get in touch"))
 			System.out.println(text);
