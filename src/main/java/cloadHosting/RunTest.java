@@ -18,6 +18,7 @@ public class RunTest {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get("http://localhost:8081/webapp/");
+		Thread.sleep(10000);
 		String text = driver.findElement(By.linkText("Get in touch")).getText();
 		if(text.equals("Get in touch"))
 			System.out.println(text);
